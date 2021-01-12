@@ -1,0 +1,58 @@
+.sidebar {
+  position: absolute;
+  left: 5%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .sidebar-menus {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      padding: 0;
+      list-style: none;
+
+      li {
+        cursor: pointer;
+        position: relative;
+
+        .hovered {
+          .underline {
+            transform-origin: bottom right;
+          }
+        }
+
+        .underline {
+          width: 100%;
+          height: 5px;
+          border-radius: 4px;
+          background: black;
+          position: absolute;
+          bottom: -6px;
+          transform-origin: bottom left;
+        }
+      }
+    }
+
+    .secondary-menu {
+      margin-bottom: 2.5rem;
+
+      h3 {
+        font-size: 1.1rem;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: space-between;
+
+      svg {
+        cursor: pointer;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}

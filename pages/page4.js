@@ -4,26 +4,28 @@ import {
   useGlobalStateContext,
 } from "../context/globalContext";
 
-export default function Home() {
+const Page4 = () => {
   const dispatch = useGlobalDispatchContext();
   const { currentTheme } = useGlobalStateContext();
 
   useEffect(() => {
     dispatch({
       type: "CHANGE_THEME",
-      payload: 0,
+      payload: 4,
     });
   }, []);
 
   return (
     <div
-      className="home"
+      className="page4"
       style={{
         color: currentTheme.textColor,
         background: currentTheme.backgroundColor,
       }}
     >
-      Home Content
+      Calendar Content
     </div>
   );
-}
+};
+
+export default Page4;

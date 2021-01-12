@@ -1,0 +1,28 @@
+$color-home: #30186d;
+$color-page1: #fce77d;
+$color-page2: #1d1b1b;
+$color-page3: #f7c5cc;
+$color-page4: #fcedda;
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
+@import "./components/headers.scss";
+@import "./components/sidebar.scss";
+@import "./components/home.scss";
+@import "./components/page1.scss";
+@import "./components/page2.scss";
+@import "./components/page3.scss";
+@import "./components/page4.scss";
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #fdfdfd;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
+}

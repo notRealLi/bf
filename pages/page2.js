@@ -3,27 +3,33 @@ import {
   useGlobalDispatchContext,
   useGlobalStateContext,
 } from "../context/globalContext";
+import Sidebar from "../components/sidebar";
 
-export default function Home() {
+const Page2 = () => {
   const dispatch = useGlobalDispatchContext();
   const { currentTheme } = useGlobalStateContext();
 
   useEffect(() => {
     dispatch({
       type: "CHANGE_THEME",
-      payload: 0,
+      payload: 2,
     });
   }, []);
 
   return (
     <div
-      className="home"
+      className="page2"
       style={{
         color: currentTheme.textColor,
         background: currentTheme.backgroundColor,
       }}
     >
-      Home Content
+      <div className="flex">
+        <Sidebar />
+        <div className="page2-content">Projects Content</div>
+      </div>
     </div>
   );
-}
+};
+
+export default Page2;
