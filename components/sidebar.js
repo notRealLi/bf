@@ -16,6 +16,7 @@ const Sidebar = () => {
   const { themeId, currentTheme } = useGlobalStateContext();
   const [optionHovered, setOptionHovered] = useState(null);
   const [socialHovered, setSocialHovered] = useState(null);
+  const [secondaryHovered, setSecondaryHovered] = useState(null);
 
   return (
     <div className="sidebar">
@@ -43,9 +44,27 @@ const Sidebar = () => {
           ))}
         </ul>
         <div className="secondary-menu">
-          <h3>About</h3>
-          <h3>Contact</h3>
-          <h3>Blogs</h3>
+          <motion.h3
+            onMouseEnter={() => setSecondaryHovered("about")}
+            onMouseLeave={() => setSecondaryHovered(null)}
+            animate={{ opacity: secondaryHovered === "about" ? 0.5 : 1 }}
+          >
+            About
+          </motion.h3>
+          <motion.h3
+            onMouseEnter={() => setSecondaryHovered("contact")}
+            onMouseLeave={() => setSecondaryHovered(null)}
+            animate={{ opacity: secondaryHovered === "contact" ? 0.5 : 1 }}
+          >
+            Contact
+          </motion.h3>
+          <motion.h3
+            onMouseEnter={() => setSecondaryHovered("blogs")}
+            onMouseLeave={() => setSecondaryHovered(null)}
+            animate={{ opacity: secondaryHovered === "blogs" ? 0.5 : 1 }}
+          >
+            Blogs
+          </motion.h3>
         </div>
         <div className="social-links">
           <motion.svg
